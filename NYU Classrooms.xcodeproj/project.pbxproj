@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
+		D8D86D521E89726F00744D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D511E89726F00744D8A /* ViewController.swift */; };
+		D8D86D551E89726F00744D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D531E89726F00744D8A /* Main.storyboard */; };
+		D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */; };
+		D8D86D5A1E89726F00744D8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D591E89726F00744D8A /* Assets.xcassets */; };
+		D8D86D5D1E89726F00744D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */; };
+		D8D86D681E89727000744D8A /* NYU_ClassroomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D671E89727000744D8A /* NYU_ClassroomsTests.swift */; };
+		D8D86D731E89727000744D8A /* NYU_ClassroomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D721E89727000744D8A /* NYU_ClassroomsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8D86D641E89727000744D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8D86D441E89726F00744D8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8D86D4B1E89726F00744D8A;
+			remoteInfo = "NYU Classrooms";
+		};
+		D8D86D6F1E89727000744D8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8D86D441E89726F00744D8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8D86D4B1E89726F00744D8A;
+			remoteInfo = "NYU Classrooms";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYU Classrooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D86D4F1E89726F00744D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8D86D511E89726F00744D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8D86D541E89726F00744D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8D86D571E89726F00744D8A /* NYU_Classrooms.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYU_Classrooms.xcdatamodel; sourceTree = "<group>"; };
+		D8D86D591E89726F00744D8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8D86D5C1E89726F00744D8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8D86D5E1E89726F00744D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D86D631E89727000744D8A /* NYU ClassroomsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYU ClassroomsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D86D671E89727000744D8A /* NYU_ClassroomsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYU_ClassroomsTests.swift; sourceTree = "<group>"; };
+		D8D86D691E89727000744D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D86D6E1E89727000744D8A /* NYU ClassroomsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYU ClassroomsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8D86D721E89727000744D8A /* NYU_ClassroomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYU_ClassroomsUITests.swift; sourceTree = "<group>"; };
+		D8D86D741E89727000744D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8D86D491E89726F00744D8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D601E89727000744D8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D6B1E89727000744D8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8D86D431E89726F00744D8A = {
+			isa = PBXGroup;
+			children = (
+				D8D86D4E1E89726F00744D8A /* NYU Classrooms */,
+				D8D86D661E89727000744D8A /* NYU ClassroomsTests */,
+				D8D86D711E89727000744D8A /* NYU ClassroomsUITests */,
+				D8D86D4D1E89726F00744D8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8D86D4D1E89726F00744D8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */,
+				D8D86D631E89727000744D8A /* NYU ClassroomsTests.xctest */,
+				D8D86D6E1E89727000744D8A /* NYU ClassroomsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8D86D4E1E89726F00744D8A /* NYU Classrooms */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86D4F1E89726F00744D8A /* AppDelegate.swift */,
+				D8D86D511E89726F00744D8A /* ViewController.swift */,
+				D8D86D531E89726F00744D8A /* Main.storyboard */,
+				D8D86D591E89726F00744D8A /* Assets.xcassets */,
+				D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */,
+				D8D86D5E1E89726F00744D8A /* Info.plist */,
+				D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */,
+			);
+			path = "NYU Classrooms";
+			sourceTree = "<group>";
+		};
+		D8D86D661E89727000744D8A /* NYU ClassroomsTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86D671E89727000744D8A /* NYU_ClassroomsTests.swift */,
+				D8D86D691E89727000744D8A /* Info.plist */,
+			);
+			path = "NYU ClassroomsTests";
+			sourceTree = "<group>";
+		};
+		D8D86D711E89727000744D8A /* NYU ClassroomsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D8D86D721E89727000744D8A /* NYU_ClassroomsUITests.swift */,
+				D8D86D741E89727000744D8A /* Info.plist */,
+			);
+			path = "NYU ClassroomsUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8D86D4B1E89726F00744D8A /* NYU Classrooms */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8D86D771E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU Classrooms" */;
+			buildPhases = (
+				D8D86D481E89726F00744D8A /* Sources */,
+				D8D86D491E89726F00744D8A /* Frameworks */,
+				D8D86D4A1E89726F00744D8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NYU Classrooms";
+			productName = "NYU Classrooms";
+			productReference = D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8D86D621E89727000744D8A /* NYU ClassroomsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8D86D7A1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsTests" */;
+			buildPhases = (
+				D8D86D5F1E89727000744D8A /* Sources */,
+				D8D86D601E89727000744D8A /* Frameworks */,
+				D8D86D611E89727000744D8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8D86D651E89727000744D8A /* PBXTargetDependency */,
+			);
+			name = "NYU ClassroomsTests";
+			productName = "NYU ClassroomsTests";
+			productReference = D8D86D631E89727000744D8A /* NYU ClassroomsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8D86D6D1E89727000744D8A /* NYU ClassroomsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8D86D7D1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsUITests" */;
+			buildPhases = (
+				D8D86D6A1E89727000744D8A /* Sources */,
+				D8D86D6B1E89727000744D8A /* Frameworks */,
+				D8D86D6C1E89727000744D8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8D86D701E89727000744D8A /* PBXTargetDependency */,
+			);
+			name = "NYU ClassroomsUITests";
+			productName = "NYU ClassroomsUITests";
+			productReference = D8D86D6E1E89727000744D8A /* NYU ClassroomsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8D86D441E89726F00744D8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Conturbo Dev";
+				TargetAttributes = {
+					D8D86D4B1E89726F00744D8A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4U3PJXEB5U;
+						ProvisioningStyle = Automatic;
+					};
+					D8D86D621E89727000744D8A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4U3PJXEB5U;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D8D86D4B1E89726F00744D8A;
+					};
+					D8D86D6D1E89727000744D8A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4U3PJXEB5U;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D8D86D4B1E89726F00744D8A;
+					};
+				};
+			};
+			buildConfigurationList = D8D86D471E89726F00744D8A /* Build configuration list for PBXProject "NYU Classrooms" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8D86D431E89726F00744D8A;
+			productRefGroup = D8D86D4D1E89726F00744D8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8D86D4B1E89726F00744D8A /* NYU Classrooms */,
+				D8D86D621E89727000744D8A /* NYU ClassroomsTests */,
+				D8D86D6D1E89727000744D8A /* NYU ClassroomsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8D86D4A1E89726F00744D8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D86D5D1E89726F00744D8A /* LaunchScreen.storyboard in Resources */,
+				D8D86D5A1E89726F00744D8A /* Assets.xcassets in Resources */,
+				D8D86D551E89726F00744D8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D611E89727000744D8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D6C1E89727000744D8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8D86D481E89726F00744D8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D86D521E89726F00744D8A /* ViewController.swift in Sources */,
+				D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */,
+				D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D5F1E89727000744D8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D86D681E89727000744D8A /* NYU_ClassroomsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8D86D6A1E89727000744D8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8D86D731E89727000744D8A /* NYU_ClassroomsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8D86D651E89727000744D8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8D86D4B1E89726F00744D8A /* NYU Classrooms */;
+			targetProxy = D8D86D641E89727000744D8A /* PBXContainerItemProxy */;
+		};
+		D8D86D701E89727000744D8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8D86D4B1E89726F00744D8A /* NYU Classrooms */;
+			targetProxy = D8D86D6F1E89727000744D8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8D86D531E89726F00744D8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8D86D541E89726F00744D8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8D86D5C1E89726F00744D8A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8D86D751E89727000744D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8D86D761E89727000744D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8D86D781E89727000744D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-Classrooms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D8D86D791E89727000744D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-Classrooms";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		D8D86D7B1E89727000744D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU ClassroomsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-ClassroomsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYU Classrooms.app/NYU Classrooms";
+			};
+			name = Debug;
+		};
+		D8D86D7C1E89727000744D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU ClassroomsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-ClassroomsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NYU Classrooms.app/NYU Classrooms";
+			};
+			name = Release;
+		};
+		D8D86D7E1E89727000744D8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU ClassroomsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-ClassroomsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "NYU Classrooms";
+			};
+			name = Debug;
+		};
+		D8D86D7F1E89727000744D8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4U3PJXEB5U;
+				INFOPLIST_FILE = "NYU ClassroomsUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-ClassroomsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "NYU Classrooms";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8D86D471E89726F00744D8A /* Build configuration list for PBXProject "NYU Classrooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D86D751E89727000744D8A /* Debug */,
+				D8D86D761E89727000744D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8D86D771E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU Classrooms" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D86D781E89727000744D8A /* Debug */,
+				D8D86D791E89727000744D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D8D86D7A1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D86D7B1E89727000744D8A /* Debug */,
+				D8D86D7C1E89727000744D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D8D86D7D1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D86D7E1E89727000744D8A /* Debug */,
+				D8D86D7F1E89727000744D8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D8D86D571E89726F00744D8A /* NYU_Classrooms.xcdatamodel */,
+			);
+			currentVersion = D8D86D571E89726F00744D8A /* NYU_Classrooms.xcdatamodel */;
+			path = NYU_Classrooms.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D8D86D441E89726F00744D8A /* Project object */;
+}
