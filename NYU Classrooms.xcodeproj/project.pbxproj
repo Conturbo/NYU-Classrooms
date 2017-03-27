@@ -15,6 +15,8 @@
 		D8D86D5D1E89726F00744D8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */; };
 		D8D86D681E89727000744D8A /* NYU_ClassroomsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D671E89727000744D8A /* NYU_ClassroomsTests.swift */; };
 		D8D86D731E89727000744D8A /* NYU_ClassroomsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D721E89727000744D8A /* NYU_ClassroomsUITests.swift */; };
+		D8D86D9F1E89B1AA00744D8A /* BuildingCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D9E1E89B1AA00744D8A /* BuildingCodes.swift */; };
+		D8D86DA11E89BAE500744D8A /* building_codes.json in Resources */ = {isa = PBXBuildFile; fileRef = D8D86DA01E89BAE500744D8A /* building_codes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D8D86D6E1E89727000744D8A /* NYU ClassroomsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NYU ClassroomsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86D721E89727000744D8A /* NYU_ClassroomsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYU_ClassroomsUITests.swift; sourceTree = "<group>"; };
 		D8D86D741E89727000744D8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8D86D9E1E89B1AA00744D8A /* BuildingCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildingCodes.swift; sourceTree = "<group>"; };
+		D8D86DA01E89BAE500744D8A /* building_codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = building_codes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */,
 				D8D86D5E1E89726F00744D8A /* Info.plist */,
 				D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */,
+				D8D86D9E1E89B1AA00744D8A /* BuildingCodes.swift */,
+				D8D86DA01E89BAE500744D8A /* building_codes.json */,
 			);
 			path = "NYU Classrooms";
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 			files = (
 				D8D86D5D1E89726F00744D8A /* LaunchScreen.storyboard in Resources */,
 				D8D86D5A1E89726F00744D8A /* Assets.xcassets in Resources */,
+				D8D86DA11E89BAE500744D8A /* building_codes.json in Resources */,
 				D8D86D551E89726F00744D8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 			files = (
 				D8D86D521E89726F00744D8A /* ViewController.swift in Sources */,
 				D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */,
+				D8D86D9F1E89B1AA00744D8A /* BuildingCodes.swift in Sources */,
 				D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
