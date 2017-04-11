@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */; };
 		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
 		D8D86D521E89726F00744D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D511E89726F00744D8A /* ViewController.swift */; };
 		D8D86D551E89726F00744D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D531E89726F00744D8A /* Main.storyboard */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYU Classrooms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.debug.xcconfig"; sourceTree = "<group>"; };
+		79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.release.xcconfig"; sourceTree = "<group>"; };
 		D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYU Classrooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86D4F1E89726F00744D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D86D511E89726F00744D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		934B405E204DFF4D403ECB06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */,
+				79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF0C878D0DADA671003659FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D8D86D431E89726F00744D8A = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +109,8 @@
 				D8D86D661E89727000744D8A /* NYU ClassroomsTests */,
 				D8D86D711E89727000744D8A /* NYU ClassroomsUITests */,
 				D8D86D4D1E89726F00744D8A /* Products */,
+				934B405E204DFF4D403ECB06 /* Pods */,
+				CF0C878D0DADA671003659FC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8D86D771E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU Classrooms" */;
 			buildPhases = (
+				91E1737BD2776ABE1555512F /* [CP] Check Pods Manifest.lock */,
 				D8D86D481E89726F00744D8A /* Sources */,
 				D8D86D491E89726F00744D8A /* Frameworks */,
 				D8D86D4A1E89726F00744D8A /* Resources */,
+				A8D4332A8A2085552AB1EE3A /* [CP] Embed Pods Frameworks */,
+				43AA86C6D423ACE8EEC63FFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +293,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43AA86C6D423ACE8EEC63FFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91E1737BD2776ABE1555512F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8D4332A8A2085552AB1EE3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8D86D481E89726F00744D8A /* Sources */ = {
@@ -423,6 +498,7 @@
 		};
 		D8D86D781E89727000744D8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
@@ -436,6 +512,7 @@
 		};
 		D8D86D791E89727000744D8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
