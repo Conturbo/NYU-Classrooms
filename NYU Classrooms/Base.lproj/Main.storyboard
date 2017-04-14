@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,24 +59,37 @@
                                     <action selector="lookUpBuildingCodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JK7-R8-yQd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-vj-y4x">
+                                <rect key="frame" x="57" y="233" width="300" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="bTN-RK-sn3"/>
+                                    <constraint firstAttribute="width" constant="300" id="vBc-8F-9Hn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MX6-B4-HwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2VU-T6-sf0"/>
+                            <constraint firstItem="yuc-vj-y4x" firstAttribute="top" secondItem="f09-ja-biz" secondAttribute="bottom" constant="22" id="J0V-VY-6QF"/>
                             <constraint firstItem="MX6-B4-HwB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="W0c-xe-fzm"/>
                             <constraint firstItem="TDG-wH-2d8" firstAttribute="top" secondItem="MX6-B4-HwB" secondAttribute="bottom" constant="30" id="X6p-Xz-rPP"/>
-                            <constraint firstItem="f09-ja-biz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a7k-hs-qVj"/>
+                            <constraint firstItem="yuc-vj-y4x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bOb-S6-GBj"/>
                             <constraint firstItem="TDG-wH-2d8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dII-fG-20T"/>
                             <constraint firstItem="f09-ja-biz" firstAttribute="top" secondItem="TDG-wH-2d8" secondAttribute="bottom" constant="31" id="dRY-0q-2A9"/>
+                            <constraint firstItem="f09-ja-biz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQN-A8-BiT"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressLabel" destination="yuc-vj-y4x" id="rOB-qU-y5t"/>
                         <outlet property="buildingCodeTextField" destination="TDG-wH-2d8" id="bek-bZ-oyg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="116.25" y="123.59154929577466"/>
+            <point key="canvasLocation" x="115.94202898550725" y="123.09782608695653"/>
         </scene>
     </scenes>
 </document>
