@@ -10,16 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var addressLabel: UILabel!
+    
     // Building Code Text Field
     @IBOutlet weak var buildingCodeTextField: UITextField!
     
     // Return button
     @IBAction func returnButtonPressed(_ sender: Any) {
+        showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
     }
     
     // Look up button (We can delete this potentially)
     @IBAction func lookUpBuildingCodeButton(_ sender: Any) {
+        showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
     }
         
@@ -39,6 +43,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
+    }
+    
+    func showAddress(buildingCode: String) {
+        if let address: String = BuildingCodes.buildingCodes[buildingCode.uppercased().trimmingCharacters(in: .whitespaces)] {
+            addressLabel.text = address
+        } else {
+            addressLabel.text = "Building Code Not Found"
+        }
     }
 }
 
