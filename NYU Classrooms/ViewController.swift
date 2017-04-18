@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var addressLabel: UILabel!
     
+    @IBOutlet weak var classRoomTableView: UITableView!
     // Building Code Text Field
     @IBOutlet weak var buildingCodeTextField: UITextField!
     
@@ -26,11 +27,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
     }
-        
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        cell.textLabel?.text = "Cell"
+        return cell
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.buildingCodeTextField.delegate = self  // This is needed to make the keyboard's 'return' button work
+        classRoomTableView.dataSource = self
 
     }
 
@@ -51,6 +64,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         } else {
             addressLabel.text = "Building Code Not Found"
         }
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return false
     }
 }
 

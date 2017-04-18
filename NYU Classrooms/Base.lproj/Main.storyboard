@@ -60,31 +60,54 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-vj-y4x">
-                                <rect key="frame" x="57" y="233" width="300" height="208"/>
+                                <rect key="frame" x="57" y="233" width="300" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="208" id="bTN-RK-sn3"/>
+                                    <constraint firstAttribute="height" constant="100" id="bTN-RK-sn3"/>
                                     <constraint firstAttribute="width" constant="300" id="vBc-8F-9Hn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VKr-4k-l8Q">
+                                <rect key="frame" x="0.0" y="368" width="414" height="368"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="DJC-ZO-6LS">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DJC-ZO-6LS" id="lGp-On-Nlg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3v0-VD-Lxk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aTu-x9-NfS"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MX6-B4-HwB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2VU-T6-sf0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VKr-4k-l8Q" secondAttribute="bottom" id="3LI-AZ-dIM"/>
                             <constraint firstItem="yuc-vj-y4x" firstAttribute="top" secondItem="f09-ja-biz" secondAttribute="bottom" constant="22" id="J0V-VY-6QF"/>
                             <constraint firstItem="MX6-B4-HwB" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="W0c-xe-fzm"/>
                             <constraint firstItem="TDG-wH-2d8" firstAttribute="top" secondItem="MX6-B4-HwB" secondAttribute="bottom" constant="30" id="X6p-Xz-rPP"/>
+                            <constraint firstItem="VKr-4k-l8Q" firstAttribute="top" secondItem="yuc-vj-y4x" secondAttribute="bottom" constant="35" id="XY3-eD-Ji4"/>
                             <constraint firstItem="yuc-vj-y4x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bOb-S6-GBj"/>
                             <constraint firstItem="TDG-wH-2d8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dII-fG-20T"/>
                             <constraint firstItem="f09-ja-biz" firstAttribute="top" secondItem="TDG-wH-2d8" secondAttribute="bottom" constant="31" id="dRY-0q-2A9"/>
+                            <constraint firstItem="VKr-4k-l8Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kBP-q3-6Um"/>
                             <constraint firstItem="f09-ja-biz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pQN-A8-BiT"/>
+                            <constraint firstAttribute="trailing" secondItem="VKr-4k-l8Q" secondAttribute="trailing" id="pyU-sL-eVH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="addressLabel" destination="yuc-vj-y4x" id="rOB-qU-y5t"/>
                         <outlet property="buildingCodeTextField" destination="TDG-wH-2d8" id="bek-bZ-oyg"/>
+                        <outlet property="classRoomTableView" destination="VKr-4k-l8Q" id="tiw-u9-JWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
