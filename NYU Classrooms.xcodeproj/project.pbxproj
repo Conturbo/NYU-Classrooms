@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */; };
+		D80EBDD41EA6755A008D5B1A /* AddClassRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80EBDD31EA6755A008D5B1A /* AddClassRoomViewController.swift */; };
 		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
 		D8D86D521E89726F00744D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D511E89726F00744D8A /* ViewController.swift */; };
 		D8D86D551E89726F00744D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D531E89726F00744D8A /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYU Classrooms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.debug.xcconfig"; sourceTree = "<group>"; };
 		79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.release.xcconfig"; sourceTree = "<group>"; };
+		D80EBDD31EA6755A008D5B1A /* AddClassRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddClassRoomViewController.swift; sourceTree = "<group>"; };
 		D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYU Classrooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86D4F1E89726F00744D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D86D511E89726F00744D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				D8D86D4F1E89726F00744D8A /* AppDelegate.swift */,
 				D8D86D511E89726F00744D8A /* ViewController.swift */,
+				D80EBDD31EA6755A008D5B1A /* AddClassRoomViewController.swift */,
 				D8D86D531E89726F00744D8A /* Main.storyboard */,
 				D8D86D591E89726F00744D8A /* Assets.xcassets */,
 				D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */,
@@ -349,6 +352,7 @@
 			files = (
 				D8D86D521E89726F00744D8A /* ViewController.swift in Sources */,
 				D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */,
+				D80EBDD41EA6755A008D5B1A /* AddClassRoomViewController.swift in Sources */,
 				D8D86D9F1E89B1AA00744D8A /* BuildingCodes.swift in Sources */,
 				D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */,
 			);
@@ -601,6 +605,7 @@
 				D8D86D791E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D86D7A1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +614,7 @@
 				D8D86D7C1E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D86D7D1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsUITests" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +623,7 @@
 				D8D86D7F1E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    var usersClasses = ["iOS Programming", "Applied Internet Technology", "Operating Systems", "Intermediate Greek Language 2"]
+    
     @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var classRoomTableView: UITableView!
@@ -29,12 +31,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return usersClasses.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = "Cell"
+        cell.textLabel?.text = usersClasses[indexPath.row]
         return cell
     }
 
