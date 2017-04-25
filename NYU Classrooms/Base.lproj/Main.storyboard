@@ -69,14 +69,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80p-4G-g1h">
-                                <rect key="frame" x="132" y="434" width="150" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Temp Button To Maps"/>
-                                <connections>
-                                    <segue destination="g6z-Fb-1cB" kind="show" id="KiM-7i-BOm"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -102,7 +94,7 @@
         <!--Map View Controller-->
         <scene sceneID="lad-SQ-vaT">
             <objects>
-                <viewController id="g6z-Fb-1cB" customClass="MapViewController" customModule="NYU_Classrooms" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map" id="g6z-Fb-1cB" customClass="MapViewController" customModule="NYU_Classrooms" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0bo-gJ-kea"/>
                         <viewControllerLayoutGuide type="bottom" id="LvU-6f-OrV"/>

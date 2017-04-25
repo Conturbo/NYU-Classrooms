@@ -134,6 +134,7 @@
 				D8D86D4F1E89726F00744D8A /* AppDelegate.swift */,
 				45EAEEF31EAFA78E00BFD6AB /* Keys.swift */,
 				D8D86D511E89726F00744D8A /* ViewController.swift */,
+				D877C7D01EAEDDC400E53794 /* MapViewController.swift */,
 				D8D86D531E89726F00744D8A /* Main.storyboard */,
 				D8D86D591E89726F00744D8A /* Assets.xcassets */,
 				D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */,
@@ -141,7 +142,6 @@
 				D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */,
 				D8D86D9E1E89B1AA00744D8A /* BuildingCodes.swift */,
 				D8D86DA01E89BAE500744D8A /* building_codes.json */,
-				D877C7D01EAEDDC400E53794 /* MapViewController.swift */,
 			);
 			path = "NYU Classrooms";
 			sourceTree = "<group>";

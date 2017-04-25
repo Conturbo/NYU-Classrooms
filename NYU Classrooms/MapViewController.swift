@@ -6,14 +6,18 @@
 //  Copyright © 2017 Conturbo Dev. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import GoogleMaps
 
 class MapViewController: UIViewController {
-
+    
+    
+    var sentAddress:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(sentAddress);
         // Do any additional setup after loading the view.
     }
 
