@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E927771EAECA5000E18FF3 /* Property_List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45E927761EAECA5000E18FF3 /* Property_List.plist */; };
 		A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */; };
 		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
 		D8D86D521E89726F00744D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D511E89726F00744D8A /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYU Classrooms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		45E927761EAECA5000E18FF3 /* Property_List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Property_List.plist; sourceTree = "<group>"; };
 		613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.debug.xcconfig"; sourceTree = "<group>"; };
 		79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.release.xcconfig"; sourceTree = "<group>"; };
 		D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYU Classrooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				D8D86D591E89726F00744D8A /* Assets.xcassets */,
 				D8D86D5B1E89726F00744D8A /* LaunchScreen.storyboard */,
 				D8D86D5E1E89726F00744D8A /* Info.plist */,
+				45E927761EAECA5000E18FF3 /* Property_List.plist */,
 				D8D86D561E89726F00744D8A /* NYU_Classrooms.xcdatamodeld */,
 				D8D86D9E1E89B1AA00744D8A /* BuildingCodes.swift */,
 				D8D86DA01E89BAE500744D8A /* building_codes.json */,
@@ -274,6 +277,7 @@
 				D8D86D5D1E89726F00744D8A /* LaunchScreen.storyboard in Resources */,
 				D8D86D5A1E89726F00744D8A /* Assets.xcassets in Resources */,
 				D8D86DA11E89BAE500744D8A /* building_codes.json in Resources */,
+				45E927771EAECA5000E18FF3 /* Property_List.plist in Resources */,
 				D8D86D551E89726F00744D8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +605,7 @@
 				D8D86D791E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D86D7A1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +614,7 @@
 				D8D86D7C1E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D86D7D1E89727000744D8A /* Build configuration list for PBXNativeTarget "NYU ClassroomsUITests" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +623,7 @@
 				D8D86D7F1E89727000744D8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
