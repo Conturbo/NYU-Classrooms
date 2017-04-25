@@ -70,9 +70,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80p-4G-g1h">
-                                <rect key="frame" x="206" y="437" width="46" height="30"/>
+                                <rect key="frame" x="132" y="434" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Temp Button To Maps"/>
                                 <connections>
                                     <segue destination="g6z-Fb-1cB" kind="show" id="KiM-7i-BOm"/>
                                 </connections>
