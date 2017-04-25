@@ -52,5 +52,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             addressLabel.text = "Building Code Not Found"
         }
     }
+    
 }
 
