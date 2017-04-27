@@ -57,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="lookUpBuildingCodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JK7-R8-yQd"/>
+                                    <segue destination="g6z-Fb-1cB" kind="show" identifier="mapSegue" id="bQI-bd-e6C"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-vj-y4x">

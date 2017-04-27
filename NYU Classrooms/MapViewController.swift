@@ -17,7 +17,6 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(sentAddress);
         // Do any additional setup after loading the view.
     }
 
@@ -27,12 +26,20 @@ class MapViewController: UIViewController {
     }
     
     
-    // NYC is currently displayed. Eventually this will be sent the address.
+    // NYC is currently displayed.
     // The marker will be at that location, and the address will be displayed in the title and snippet.
     override func loadView() {
+        sentAddress = addressToSend // holds value of address sent
+        
         let camera = GMSCameraPosition.camera(withLatitude:40.7128 , longitude:-74.0059, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
+        marker.title = sentAddress
+        marker.snippet = sentAddress
+        marker.map = mapView
         
     }
     

@@ -48,20 +48,25 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func showAddress(buildingCode: String) {
         if let address: String = BuildingCodes.buildingCodes[buildingCode.uppercased().trimmingCharacters(in: .whitespaces)] {
             addressLabel.text = address
-            // performSegue goes here, maybe?
         } else {
             addressLabel.text = "Building Code Not Found"
         }
     }
-    
-    // prepare function sends address text over to new view, the map view
-    func prepare(segue:UIStoryboardSegue, sender:AnyObject?) {
-        var DestViewController: MapViewController = segue.destination as! MapViewController
-        
-        DestViewController.sentAddress = addressLabel.text!
-        
-        
-        
+  
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "mapSegue" {
+                if addressLabel.text == "Building Code Not Found" {
+                    return false
+                }
+                else {
+                    addressToSend = addressLabel.text!
+                    return true
+                }
+                
+            }
+            else {
+                return true
+            }
     }
     
     
