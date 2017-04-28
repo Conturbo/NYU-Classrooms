@@ -31,15 +31,42 @@ class MapViewController: UIViewController {
     override func loadView() {
         sentAddress = addressToSend // holds value of address sent
         
-        let camera = GMSCameraPosition.camera(withLatitude:40.7128 , longitude:-74.0059, zoom: 12.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
+        /* convert address to lat/long using NSURLSession and Google geocoding API */
+        print(sentAddress)
+        var urlBuild = "https://maps.googleapis.com/maps/api/geocode/json?address="
+        urlBuild += "238+Thompson+Street,+NY,+NY"
+        urlBuild += "&key=" + gcAPIKey
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
-        marker.title = sentAddress
-        marker.snippet = sentAddress
-        marker.map = mapView
+        let url = URL(string: urlBuild)
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error != nil {
+                print("error")
+            }
+            else {
+                if let content = data {
+                    do {
+                        let JSON = try JSONSerialization.jsonObject(with: content, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        
+                        if let results = JSON["results"] as? NSArray {
+                            if let address_components = results[0] as? NSDictionary {
+                                if let geometry = address_components["geometry"] as? NSDictionary {
+                                    if let location = geometry["location"] as? NSDictionary {
+                                        // parse the lat and lng values here, convert them to doubles
+                                        // use them to center the map and put down the marker
+                                        print(location)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch {
+                        print("JSON error")
+                    }
+                }
+                
+            }
+        }
+        task.resume()
         
     }
     
