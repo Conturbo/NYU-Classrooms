@@ -37,6 +37,7 @@ class MapViewController: UIViewController {
         urlBuild += "238+Thompson+Street,+NY,+NY"
         urlBuild += "&key=" + gcAPIKey
         
+        
         let url = URL(string: urlBuild)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
             if error != nil {
@@ -53,7 +54,7 @@ class MapViewController: UIViewController {
                                     if let location = geometry["location"] as? NSDictionary {
                                         // parse the lat and lng values here, convert them to doubles
                                         // use them to center the map and put down the marker
-                                        print(location)
+                                    
                                     }
                                 }
                             }
@@ -67,6 +68,16 @@ class MapViewController: UIViewController {
             }
         }
         task.resume()
+        
+        let camera = GMSCameraPosition.camera(withLatitude:40.7128 , longitude:-74.0059, zoom: 12.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
+        marker.title = self.sentAddress
+        marker.snippet = self.sentAddress
+        marker.map = mapView
         
     }
     
