@@ -410,6 +410,7 @@ class BuildingCodes {
     ]
     
     static let detailedAddresses = [
-        "108 Broadway": "108 Broadway, New York, NY"
+        "108 Broadway": "108 Broadway, New York, NY",
+        "10 Astor Place": "10 Astor Place, New York, NY"
     ]
 }
