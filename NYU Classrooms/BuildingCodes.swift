@@ -408,4 +408,8 @@ class BuildingCodes {
         "WS": "Washington Square",
         "WW": "Woolworth Building, 15 Barclay Street"
     ]
+    
+    static let detailedAddresses = [
+        "108 Broadway": "108 Broadway, New York, NY"
+    ]
 }
