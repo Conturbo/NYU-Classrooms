@@ -9,3 +9,4 @@
 import Foundation
 
 var addressToSend = ""
+var detailedToSend = ""
