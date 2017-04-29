@@ -52,6 +52,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
             addressLabel.text = "Building Code Not Found"
         }
     }
+  
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "mapSegue" {
+                if addressLabel.text == "Building Code Not Found" {
+                    return false
+                }
+                else {
+                    addressToSend = addressLabel.text!
+                    return true
+                }
+                
+            }
+            else {
+                return true
+            }
+    }
+    
+    
     
 }
 

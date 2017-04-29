@@ -57,6 +57,7 @@
                                 </state>
                                 <connections>
                                     <action selector="lookUpBuildingCodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JK7-R8-yQd"/>
+                                    <segue destination="g6z-Fb-1cB" kind="show" identifier="mapSegue" id="h7a-8B-QEO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuc-vj-y4x">
@@ -94,7 +95,7 @@
         <!--Map View Controller-->
         <scene sceneID="lad-SQ-vaT">
             <objects>
-                <viewController id="g6z-Fb-1cB" customClass="MapViewController" customModule="NYU_Classrooms" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map" id="g6z-Fb-1cB" customClass="MapViewController" customModule="NYU_Classrooms" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0bo-gJ-kea"/>
                         <viewControllerLayoutGuide type="bottom" id="LvU-6f-OrV"/>
@@ -104,10 +105,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tRw-8P-rgA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ye-Vo-hWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="150"/>
+            <point key="canvasLocation" x="1842.0289855072465" y="150"/>
         </scene>
     </scenes>
 </document>
