@@ -37,6 +37,9 @@ class MapViewController: UIViewController {
         urlBuild += "238+Thompson+Street,+NY,+NY"
         urlBuild += "&key=" + gcAPIKey
         
+        var inLat:Double = 0.0
+        var inLng:Double = 0.0
+        
         
         let url = URL(string: urlBuild)
         let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
@@ -54,6 +57,13 @@ class MapViewController: UIViewController {
                                     if let location = geometry["location"] as? NSDictionary {
                                         // parse the lat and lng values here, convert them to doubles
                                         // use them to center the map and put down the marker
+                                        let strLat:NSNumber = (location["lat"] as? NSNumber)!
+                                        let strLng:NSNumber = (location["lng"] as? NSNumber)!
+                                        let Lat:Double = strLat as! Double
+                                        let Lng:Double = strLng as! Double
+                                        inLat = Lat
+                                        inLng = Lng
+                                        
                                     
                                     }
                                 }
@@ -69,15 +79,16 @@ class MapViewController: UIViewController {
         }
         task.resume()
         
-        let camera = GMSCameraPosition.camera(withLatitude:40.7128 , longitude:-74.0059, zoom: 12.0)
+        let camera = GMSCameraPosition.camera(withLatitude:40.7308228 , longitude:-73.997332, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
+        marker.position = CLLocationCoordinate2D(latitude: inLat, longitude: inLng)
         marker.title = self.sentAddress
         marker.snippet = self.sentAddress
         marker.map = mapView
+        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: inLat, longitude: inLng))
         
     }
     
