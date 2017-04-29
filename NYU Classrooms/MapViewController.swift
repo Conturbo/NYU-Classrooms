@@ -32,10 +32,24 @@ class MapViewController: UIViewController {
         sentAddress = addressToSend // holds value of address sent
         
         /* convert address to lat/long using NSURLSession and Google geocoding API */
-        print(sentAddress)
         var urlBuild = "https://maps.googleapis.com/maps/api/geocode/json?address="
-        urlBuild += "238+Thompson+Street,+NY,+NY"
+        
+        // build the address section here, take the simple address, get the detailed address
+        // put +'s in for spaces, add to the urlBuild in place of this line
+        for i in detailedToSend.characters {
+            if i == " " {
+                urlBuild += "+"
+            }
+            else {
+                urlBuild += String(i)
+            }
+        }
+        
+        
+        //urlBuild += "238+Thompson+Street,+NY,+NY"
         urlBuild += "&key=" + gcAPIKey
+        
+        print(urlBuild)
         
         var inLat:Double = 0.0
         var inLng:Double = 0.0
@@ -86,7 +100,7 @@ class MapViewController: UIViewController {
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: inLat, longitude: inLng)
         marker.title = self.sentAddress
-        marker.snippet = self.sentAddress
+        marker.snippet = detailedToSend
         marker.map = mapView
         mapView.animate(toLocation: CLLocationCoordinate2D(latitude: inLat, longitude: inLng))
         
