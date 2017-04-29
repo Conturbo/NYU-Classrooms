@@ -10,6 +10,7 @@
 		450BFF491EB2782200B64E2E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450BFF481EB2782200B64E2E /* Address.swift */; };
 		A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */; };
 		D877C7D11EAEDDC400E53794 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D877C7D01EAEDDC400E53794 /* MapViewController.swift */; };
+		D894C78F1EB5157000733358 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D894C78E1EB5157000733358 /* Keys.swift */; };
 		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
 		D8D86D521E89726F00744D8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D511E89726F00744D8A /* ViewController.swift */; };
 		D8D86D551E89726F00744D8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D86D531E89726F00744D8A /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.debug.xcconfig"; sourceTree = "<group>"; };
 		79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.release.xcconfig"; sourceTree = "<group>"; };
 		D877C7D01EAEDDC400E53794 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D894C78E1EB5157000733358 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		D8D86D4C1E89726F00744D8A /* NYU Classrooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYU Classrooms.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D86D4F1E89726F00744D8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8D86D511E89726F00744D8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				D8D86D4F1E89726F00744D8A /* AppDelegate.swift */,
+				D894C78E1EB5157000733358 /* Keys.swift */,
 				D8D86D511E89726F00744D8A /* ViewController.swift */,
 				450BFF481EB2782200B64E2E /* Address.swift */,
 				D877C7D01EAEDDC400E53794 /* MapViewController.swift */,
@@ -357,6 +360,7 @@
 				D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */,
 				D8D86D9F1E89B1AA00744D8A /* BuildingCodes.swift in Sources */,
 				D877C7D11EAEDDC400E53794 /* MapViewController.swift in Sources */,
+				D894C78F1EB5157000733358 /* Keys.swift in Sources */,
 				D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */,
 				450BFF491EB2782200B64E2E /* Address.swift in Sources */,
 			);
