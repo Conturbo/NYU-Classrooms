@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		450BFF491EB2782200B64E2E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450BFF481EB2782200B64E2E /* Address.swift */; };
+		45A6FC881EB515CE00B3AB5B /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A6FC871EB515CE00B3AB5B /* Keys.swift */; };
 		A139AF6B9208EF34CE62E969 /* libPods-NYU Classrooms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */; };
 		D877C7D11EAEDDC400E53794 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D877C7D01EAEDDC400E53794 /* MapViewController.swift */; };
 		D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D86D4F1E89726F00744D8A /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		078FECBC8F6A6A54FCAA1C85 /* libPods-NYU Classrooms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYU Classrooms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		450BFF481EB2782200B64E2E /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		45A6FC871EB515CE00B3AB5B /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.debug.xcconfig"; sourceTree = "<group>"; };
 		79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYU Classrooms.release.xcconfig"; path = "Pods/Target Support Files/Pods-NYU Classrooms/Pods-NYU Classrooms.release.xcconfig"; sourceTree = "<group>"; };
 		D877C7D01EAEDDC400E53794 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		D8D86D4E1E89726F00744D8A /* NYU Classrooms */ = {
 			isa = PBXGroup;
 			children = (
+				45A6FC871EB515CE00B3AB5B /* Keys.swift */,
 				D8D86D4F1E89726F00744D8A /* AppDelegate.swift */,
 				D8D86D511E89726F00744D8A /* ViewController.swift */,
 				450BFF481EB2782200B64E2E /* Address.swift */,
@@ -357,6 +360,7 @@
 				D8D86D501E89726F00744D8A /* AppDelegate.swift in Sources */,
 				D8D86D9F1E89B1AA00744D8A /* BuildingCodes.swift in Sources */,
 				D877C7D11EAEDDC400E53794 /* MapViewController.swift in Sources */,
+				45A6FC881EB515CE00B3AB5B /* Keys.swift in Sources */,
 				D8D86D581E89726F00744D8A /* NYU_Classrooms.xcdatamodeld in Sources */,
 				450BFF491EB2782200B64E2E /* Address.swift in Sources */,
 			);
