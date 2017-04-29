@@ -48,6 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func showAddress(buildingCode: String) {
         if let address: String = BuildingCodes.buildingCodes[buildingCode.uppercased().trimmingCharacters(in: .whitespaces)] {
             addressLabel.text = address
+            detailedToSend = BuildingCodes.detailedAddresses[address]!
         } else {
             addressLabel.text = "Building Code Not Found"
         }
