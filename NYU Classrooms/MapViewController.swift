@@ -77,6 +77,7 @@ class MapViewController: UIViewController {
                                         let Lng:Double = strLng as! Double
                                         inLat = Lat
                                         inLng = Lng
+                                        print(self.sentAddress + " got its coordinates.")
                                         
                                     
                                     }
