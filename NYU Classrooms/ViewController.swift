@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-     var usersClasses = UserDefaults.standard.object(forKey: "classrooms") as! [Dictionary<String, String>]
+     var usersClasses = [] as! [Dictionary<String, String>]
     
     @IBOutlet weak var addressLabel: UILabel!
     
