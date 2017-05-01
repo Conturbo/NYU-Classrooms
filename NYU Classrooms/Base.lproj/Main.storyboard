@@ -121,6 +121,7 @@
                     <connections>
                         <outlet property="addressLabel" destination="yuc-vj-y4x" id="rOB-qU-y5t"/>
                         <outlet property="buildingCodeTextField" destination="TDG-wH-2d8" id="bek-bZ-oyg"/>
+                        <outlet property="classRoomTableView" destination="QTm-C8-wRI" id="65k-vV-AIe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,10 +147,10 @@
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="122.28260869565219"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Classroom View Controller-->
         <scene sceneID="8lZ-nb-Gxe">
             <objects>
-                <viewController id="QX8-Bx-yGF" sceneMemberID="viewController">
+                <viewController id="QX8-Bx-yGF" customClass="AddClassroomViewController" customModule="NYU_Classrooms" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fcK-3K-4m6"/>
                         <viewControllerLayoutGuide type="bottom" id="NzH-aa-bVI"/>
@@ -159,13 +160,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a Classroom: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHi-ei-s9U">
-                                <rect key="frame" x="20" y="127.00000000000001" width="374" height="32.333333333333357"/>
+                                <rect key="frame" x="20" y="83" width="374" height="32.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-A6-dNE">
-                                <rect key="frame" x="229" y="223" width="97" height="30"/>
+                                <rect key="frame" x="229" y="179" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="OG7-Qj-SbA"/>
                                 </constraints>
@@ -174,7 +175,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6Z-27-mGe">
-                                <rect key="frame" x="229" y="293" width="97" height="30"/>
+                                <rect key="frame" x="229" y="249" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="DuI-Xg-G9l"/>
                                 </constraints>
@@ -183,19 +184,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQI-0D-Ee7">
-                                <rect key="frame" x="117" y="228" width="96" height="21"/>
+                                <rect key="frame" x="117" y="184" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0s-8h-P7N">
-                                <rect key="frame" x="109" y="298" width="112" height="21"/>
+                                <rect key="frame" x="109" y="254" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rps-hB-faI">
-                                <rect key="frame" x="98.666666666666686" y="341" width="217" height="52"/>
+                                <rect key="frame" x="98.666666666666686" y="297" width="217" height="52"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="433-nX-tXF"/>
@@ -205,18 +206,34 @@
                                 <state key="normal" title="Save Classroom">
                                     <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveClassroom:" destination="QX8-Bx-yGF" eventType="touchUpInside" id="mis-Rg-2fi"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backSegue" id="B1O-mY-HTc"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1u-0c-j6V">
+                                <rect key="frame" x="20" y="375" width="374" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="KFo-eV-srE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="L1u-0c-j6V" firstAttribute="leading" secondItem="6JW-n2-r4t" secondAttribute="leadingMargin" id="0xG-WX-hna"/>
                             <constraint firstItem="sHi-ei-s9U" firstAttribute="trailing" secondItem="6JW-n2-r4t" secondAttribute="trailingMargin" id="2Rr-3q-Hvo"/>
                             <constraint firstItem="rps-hB-faI" firstAttribute="top" secondItem="o6Z-27-mGe" secondAttribute="bottom" constant="18" id="39Y-T2-uYU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CoA-A6-dNE" secondAttribute="trailing" constant="68" id="3dw-GS-1sD"/>
                             <constraint firstItem="sHi-ei-s9U" firstAttribute="leading" secondItem="6JW-n2-r4t" secondAttribute="leadingMargin" id="AXO-51-d9p"/>
+                            <constraint firstItem="L1u-0c-j6V" firstAttribute="trailing" secondItem="6JW-n2-r4t" secondAttribute="trailingMargin" id="Ccc-OK-P7D"/>
                             <constraint firstItem="CQI-0D-Ee7" firstAttribute="leading" secondItem="6JW-n2-r4t" secondAttribute="leadingMargin" constant="97" id="GPI-bg-RLy"/>
                             <constraint firstItem="sHi-ei-s9U" firstAttribute="top" secondItem="fcK-3K-4m6" secondAttribute="bottom" constant="63" id="QoP-cm-xYv"/>
                             <constraint firstItem="CoA-A6-dNE" firstAttribute="top" secondItem="sHi-ei-s9U" secondAttribute="bottom" constant="63.670000000000002" id="UKj-m3-K01"/>
                             <constraint firstItem="F0s-8h-P7N" firstAttribute="leading" secondItem="6JW-n2-r4t" secondAttribute="leadingMargin" constant="89" id="Uhe-hE-jL3"/>
+                            <constraint firstItem="L1u-0c-j6V" firstAttribute="top" secondItem="rps-hB-faI" secondAttribute="bottom" constant="26" id="ezv-Kl-m1e"/>
                             <constraint firstItem="rps-hB-faI" firstAttribute="centerX" secondItem="6JW-n2-r4t" secondAttribute="centerX" id="ggw-3q-g3j"/>
                             <constraint firstItem="CQI-0D-Ee7" firstAttribute="top" secondItem="sHi-ei-s9U" secondAttribute="bottom" constant="68.670000000000002" id="lYh-fc-z4r"/>
                             <constraint firstAttribute="trailingMargin" secondItem="o6Z-27-mGe" secondAttribute="trailing" constant="68" id="oan-zI-Bz5"/>
@@ -224,6 +241,11 @@
                             <constraint firstItem="o6Z-27-mGe" firstAttribute="top" secondItem="CoA-A6-dNE" secondAttribute="bottom" constant="40" id="qNd-mq-1Pf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buildingCodeNotFoundLabel" destination="L1u-0c-j6V" id="P8t-YX-98r"/>
+                        <outlet property="buildingCodeTextField" destination="o6Z-27-mGe" id="UUY-x4-5E3"/>
+                        <outlet property="classNameTextField" destination="CoA-A6-dNE" id="CUd-v2-AkK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMT-HH-Gbx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,7 +256,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UNZ-Et-Qg7" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="js2-ai-AsO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="js2-ai-AsO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -248,4 +270,7 @@
             <point key="canvasLocation" x="115.94202898550725" y="123.09782608695653"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="B1O-mY-HTc"/>
+    </inferredMetricsTieBreakers>
 </document>
