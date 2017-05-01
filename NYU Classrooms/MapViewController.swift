@@ -29,6 +29,14 @@ class MapViewController: UIViewController {
     // NYC is currently displayed.
     // The marker will be at that location, and the address will be displayed in the title and snippet.
     override func loadView() {
+        
+        // load the map
+        let camera = GMSCameraPosition.camera(withLatitude:40.7308228 , longitude:-73.997332, zoom: 15.0)
+        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        view = mapView
+        let marker = GMSMarker()
+        
+        
         sentAddress = addressToSend // holds value of address sent
         
         /* convert address to lat/long using NSURLSession and Google geocoding API */
@@ -79,6 +87,15 @@ class MapViewController: UIViewController {
                                         inLng = Lng
                                         print(self.sentAddress + " got its coordinates.")
                                         
+                                        
+                                        DispatchQueue.main.async{
+                                            mapView.camera = GMSCameraPosition.camera(withLatitude: inLat, longitude: inLng, zoom: 15.0)
+                                            marker.position = CLLocationCoordinate2D(latitude: inLat, longitude: inLng)
+                                            marker.title = self.sentAddress
+                                            marker.snippet = detailedToSend
+                                            marker.map = mapView
+                                        }
+
                                     
                                     }
                                 }
@@ -93,17 +110,6 @@ class MapViewController: UIViewController {
             }
         }
         task.resume()
-        
-        let camera = GMSCameraPosition.camera(withLatitude:40.7308228 , longitude:-73.997332, zoom: 15.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        view = mapView
-        
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: inLat, longitude: inLng)
-        marker.title = self.sentAddress
-        marker.snippet = detailedToSend
-        marker.map = mapView
-        mapView.animate(toLocation: CLLocationCoordinate2D(latitude: inLat, longitude: inLng))
         
     }
     
