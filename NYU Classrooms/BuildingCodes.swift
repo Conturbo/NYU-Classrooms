@@ -41,11 +41,7 @@ class BuildingCodes {
     static func showErrorMessageForInvalidBuildingCode(buildingCode: String) {
         print("Error: Building Code '\(buildingCode)' not found")
     }
-    
-    
-    // I didn't want to hard code the dictionary at first, but it importing it from the JSON file was tricky.
-    // I figured it was easier to just copy/paste and change these '{ }' to these '[ ]'
-    // We can go back and try to import it from the JSON file to clean things up whenever
+
     
     // Dictionary of NYU Building Codes
     // Key: Building Code
@@ -410,6 +406,10 @@ class BuildingCodes {
     ]
     
 
+    // Dictionary of detailed addresses for NYU building codes
+    // Key: Simplified address from buildingCodes dictionary
+    // Value: Detailed Street Address (less chance of error for geocoding api)
+    // Warning: Some addresses were difficult to find, subject to some degree of error
     static let detailedAddresses = [
         "108 Broadway": "108 Broadway, NY, NY",
         "10 Astor Place": "10 Astor Place, NY, NY",
