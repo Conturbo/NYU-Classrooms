@@ -244,7 +244,7 @@
 				TargetAttributes = {
 					D8D86D4B1E89726F00744D8A = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = T5BXN23Y2N;
+						DevelopmentTeam = 4U3PJXEB5U;
 						ProvisioningStyle = Automatic;
 					};
 					D8D86D621E89727000744D8A = {
@@ -521,7 +521,6 @@
 			baseConfigurationReference = 613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T5BXN23Y2N;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
 				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
@@ -538,7 +537,6 @@
 			baseConfigurationReference = 79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T5BXN23Y2N;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
 				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
