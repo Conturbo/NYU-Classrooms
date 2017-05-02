@@ -17,6 +17,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = self.sentAddress
         // Do any additional setup after loading the view.
     }
 
