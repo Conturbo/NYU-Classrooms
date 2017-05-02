@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     // Building Code Text Field
     @IBOutlet weak var buildingCodeTextField: UITextField!
-    
+
     // Table for classrooms
     @IBOutlet weak var classRoomTableView: UITableView!
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
     }
     
-    // Look up button (We can delete this potentially)
+    // Look up button
     @IBAction func lookUpBuildingCodeButton(_ sender: Any) {
         showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
@@ -67,33 +67,43 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         return false
     }
     
-    // Shows the address for a given building code in self.addressLabel
+
+    // Show address function is an essential part of finding the building code
     func showAddress(buildingCode: String) {
-        // If the building code exists, show it
-        // Else, say it doesn't exist
+        // if that building code has a corresponding address, it exists!
         if let address: String = BuildingCodes.buildingCodes[buildingCode.uppercased().trimmingCharacters(in: .whitespaces)] {
+            // set the address label to that address information, display to user
             addressLabel.text = address
             detailedToSend = BuildingCodes.detailedAddresses[address]!
         } else {
+            // if there is no associated address display that the building code was not found
             addressLabel.text = "Building Code Not Found"
         }
     }
   
-    // This segues into the Google Map ViewController
+
+    // function ensures that building code did have a corresponding address before allowing segue to map to occur  
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // checks that the mapSegue is the one attempting to be performed
         if identifier == "mapSegue" {
-                if addressLabel.text == "Building Code Not Found" {
-                    return false
-                }
-                else {
-                    addressToSend = addressLabel.text!
-                    return true
-                }
-                
+            // if the address was not found in the first place, don't let the segue be performed
+            if addressLabel.text == "Building Code Not Found" {
+                // return false to signal no go for segue
+                return false
             }
+            // otherwise address has been found!
             else {
+                // set the address to send variable to what the address label in the first view controller says
+                // this global var will then be accessed by the map view controller
+                addressToSend = addressLabel.text!
+                // return true for an approved segue
                 return true
-            }
+            }      
+        }
+        // if it's not the mapSegue return true, let the segue happen
+        else {
+            return true
+        }
     }
     
     // Determines how many rows are in the table
