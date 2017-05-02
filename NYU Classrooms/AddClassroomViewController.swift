@@ -40,7 +40,7 @@ class AddClassroomViewController: UIViewController, UITextFieldDelegate {
             UserDefaults.standard.set(classrooms, forKey: "classrooms")
             print(classNameTextField.text!)
             print(buildingCodeTextField.text!)
-            shouldPerformSegue(withIdentifier: "backSegue", sender: nil)
+            self.navigationController?.popViewController(animated: true)
         } else {
             buildingCodeNotFoundLabel.text = "Building Code Not Found"
         }
