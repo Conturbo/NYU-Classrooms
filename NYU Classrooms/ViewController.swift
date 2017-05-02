@@ -57,6 +57,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         // Nav title
         self.navigationItem.title = "NYU Classooms";
 
+        // Sets text field to blank when view is loaded, prevents old address from showing
+        addressLabel.text = ""
+
+
     }
 
     override func didReceiveMemoryWarning() {
