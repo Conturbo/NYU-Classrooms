@@ -15,7 +15,7 @@ class AddClassroomViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var classNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "Add a Classroom"
         // Do any additional setup after loading the view.
     }
 
