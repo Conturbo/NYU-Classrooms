@@ -521,12 +521,9 @@
 			baseConfigurationReference = 613F3041F7353A9B1BA61AB5 /* Pods-NYU Classrooms.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = T5BXN23Y2N;
-=======
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
->>>>>>> 04b394f24ec3b9e97da85c67054872611adf9bdd
 				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-Classrooms";
@@ -541,12 +538,9 @@
 			baseConfigurationReference = 79E3F37C349B612F67DA6105 /* Pods-NYU Classrooms.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = T5BXN23Y2N;
-=======
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4U3PJXEB5U;
->>>>>>> 04b394f24ec3b9e97da85c67054872611adf9bdd
 				INFOPLIST_FILE = "NYU Classrooms/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Conturbo.NYU-Classrooms";
