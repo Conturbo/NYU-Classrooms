@@ -15,6 +15,7 @@ class AddClassroomViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var classNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // The view's title
         self.navigationItem.title = "Add a Classroom"
         // Do any additional setup after loading the view.
     }
@@ -24,7 +25,10 @@ class AddClassroomViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // The "Save Classroom" button's function
+    // On click, 
+    // if the building code exists, it saves it and segues back to the main view
+    // else, it just tells you the building code was not found
     @IBAction func saveClassroom(_ sender: Any) {
         if BuildingCodes.buildingCodes[buildingCodeTextField.text!.uppercased()] != nil {
             if UserDefaults.standard.object(forKey: "classrooms") == nil {
@@ -45,14 +49,5 @@ class AddClassroomViewController: UIViewController, UITextFieldDelegate {
             buildingCodeNotFoundLabel.text = "Building Code Not Found"
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
