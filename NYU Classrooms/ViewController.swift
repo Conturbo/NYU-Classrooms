@@ -10,13 +10,19 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
+    // This initializes the usersClasses
+    // It's needed for the app's first-launch edge case
     var usersClasses = [] as! [Dictionary<String, String>]
+    
+    // Address Label
     @IBOutlet weak var addressLabel: UILabel!
     
     // Building Code Text Field
     @IBOutlet weak var buildingCodeTextField: UITextField!
 
+    // Table for classrooms
     @IBOutlet weak var classRoomTableView: UITableView!
+    
     // Return button
     @IBAction func returnButtonPressed(_ sender: Any) {
         showAddress(buildingCode: buildingCodeTextField.text!)
@@ -35,12 +41,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         self.buildingCodeTextField.delegate = self  // This is needed to make the keyboard's 'return' button work
         classRoomTableView.dataSource = self
         
+        // This handles the first-launch edge case for the classrooms mapping to nil
         if UserDefaults.standard.object(forKey: "classrooms") == nil {
             let initClassrooms = [Dictionary<String, String>]()
             UserDefaults.standard.set(initClassrooms, forKey: "classrooms")
         }
         
+        // Gets user's saved classrooms
         self.usersClasses = UserDefaults.standard.object(forKey: "classrooms") as! [Dictionary<String, String>]
+        
+        // Nav title
         self.navigationItem.title = "NYU Classooms";
 
 
@@ -96,20 +106,26 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         }
     }
     
+    // Determines how many rows are in the table
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usersClasses.count
     }
     
+    // Determines the content of each cell of the table
+    // Each cell is one of the user's saved classrooms
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         cell.textLabel?.text = self.usersClasses[indexPath.row]["class"]! + ": "+self.usersClasses[indexPath.row]["buildingCode"]!
         return cell
     }
     
+    // This gives the user the ability to delete a classroom
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
+    // The user can swipe a classroom to see the delete button
+    // The user can press the delete button to delete
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             var classrooms = UserDefaults.standard.object(forKey: "classrooms") as! [Dictionary<String, String>]
@@ -121,7 +137,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     }
     
     
-    
+    // This is needed to refresh the table's contents after adding a new classroom
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.usersClasses = UserDefaults.standard.object(forKey: "classrooms") as! [Dictionary<String, String>]
