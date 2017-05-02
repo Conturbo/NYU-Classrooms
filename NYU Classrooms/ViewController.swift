@@ -27,6 +27,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     @IBAction func returnButtonPressed(_ sender: Any) {
         showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
+        if BuildingCodes.buildingCodes[(buildingCodeTextField.text?.uppercased().trimmingCharacters(in: .whitespaces))!] != nil {
+            performSegue(withIdentifier: "mapSegue", sender: nil)
+        }
     }
     
     // Look up button (We can delete this potentially)
@@ -39,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.buildingCodeTextField.delegate = self  // This is needed to make the keyboard's 'return' button work
+        classRoomTableView.delegate = self
         classRoomTableView.dataSource = self
         
         // This handles the first-launch edge case for the classrooms mapping to nil
@@ -52,7 +56,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         // Nav title
         self.navigationItem.title = "NYU Classooms";
-
 
     }
 
@@ -105,7 +108,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     // Each cell is one of the user's saved classrooms
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
-        cell.textLabel?.text = self.usersClasses[indexPath.row]["class"]! + ": "+self.usersClasses[indexPath.row]["buildingCode"]!
+        cell.textLabel?.text = self.usersClasses[indexPath.row]["class"]! // + ": "+self.usersClasses[indexPath.row]["buildingCode"]!
         return cell
     }
     
@@ -124,6 +127,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             self.viewWillAppear(true)
             print("DELETE BUTTON PRESSED")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("PRESSED")
+        let buildingCode = usersClasses[indexPath.row]["buildingCode"]!
+        self.buildingCodeTextField.text = buildingCode
+        showAddress(buildingCode: buildingCode)
+        addressToSend = BuildingCodes.buildingCodes[buildingCode]!
+        performSegue(withIdentifier: "mapSegue", sender: nil)
     }
     
     
