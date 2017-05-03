@@ -158,6 +158,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         super.viewWillAppear(animated)
         self.usersClasses = UserDefaults.standard.object(forKey: "classrooms") as! [Dictionary<String, String>]
         self.classRoomTableView.reloadData()
+        self.navigationController?.isToolbarHidden = true;
         
     }
     

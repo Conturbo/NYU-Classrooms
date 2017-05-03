@@ -14,7 +14,17 @@ class MapViewController: UIViewController {
     
     // This variable will be populated with the address associated with a building code
     var sentAddress:String = ""
+    var tempUrlBuild = ""
     
+    @IBAction func launchGoogleMapsButton(_ sender: UIBarButtonItem) {
+        print("button pressed")
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:
+                "comgooglemaps://?daddr="+tempUrlBuild)!)
+        } else {
+            UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/place/"+tempUrlBuild)!)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = self.sentAddress
@@ -26,6 +36,11 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // This is needed to refresh the table's contents after adding a new classroom
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isToolbarHidden = false;
+        
+    }
     
     // Displays Google Map
     override func loadView() {
@@ -48,14 +63,15 @@ class MapViewController: UIViewController {
         // Ex: "108 Broadway, NY, NY" --> "108+Broadway,+NY,+NY"
         for i in detailedToSend.characters {
             if i == " " {
-                urlBuild += "+"
+                tempUrlBuild += "+"
             }
             else {
-                urlBuild += String(i)
+                tempUrlBuild += String(i)
             }
         }
         
         // adds the api key to the end of the url for request
+        urlBuild += tempUrlBuild
         urlBuild += "&key=" + gcAPIKey 
         
         print(urlBuild) // prints to console for testing
