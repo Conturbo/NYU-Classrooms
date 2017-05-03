@@ -27,9 +27,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     @IBAction func returnButtonPressed(_ sender: Any) {
         showAddress(buildingCode: buildingCodeTextField.text!)
         BuildingCodes.lookUpBuildingCode(buildingCode: buildingCodeTextField.text)
-        if BuildingCodes.buildingCodes[(buildingCodeTextField.text?.uppercased().trimmingCharacters(in: .whitespaces))!] != nil {
-            performSegue(withIdentifier: "mapSegue", sender: nil)
-        }
     }
     
     // Look up button
