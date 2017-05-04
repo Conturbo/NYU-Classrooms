@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-   
         // This is needed to handle the classrooms -> nil edge case
         // initialization of objects necessary for "add a classroom" feature
         if UserDefaults.standard.object(forKey: "classrooms") == nil {
@@ -28,8 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         // api key is provided for Google Maps SDK here, hidden in the .gitignore'd Keys.swift file
         GMSServices.provideAPIKey(apiKey)
-        
-    
+
         return true
     }
 

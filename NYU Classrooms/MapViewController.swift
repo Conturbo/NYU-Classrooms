@@ -14,20 +14,27 @@ class MapViewController: UIViewController {
     
     // This variable will be populated with the address associated with a building code
     var sentAddress:String = ""
+    // This variable will hold the address parameter, used for the geocoding api call as
+    // well as the "Launch with Google Maps" button links
     var tempUrlBuild = ""
     
+    // Button will launch Google Maps app if it is on phone, or website if it is not
     @IBAction func launchGoogleMapsButton(_ sender: UIBarButtonItem) {
-        print("button pressed")
+        print("button pressed") // testing
+        // if the phone has Google Maps downloaded, launch it with the destination 
+        // address as the address associated with the building code
         if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
             UIApplication.shared.openURL(URL(string:
                 "comgooglemaps://?daddr="+tempUrlBuild)!)
-        } else {
+        }
+        // if the app does not exist then open the web app with the address loaded
+        else {
             UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/place/"+tempUrlBuild)!)
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = self.sentAddress
+        self.navigationItem.title = self.sentAddress // set the navigation title as the simple address
         // Do any additional setup after loading the view.
     }
 
@@ -38,6 +45,7 @@ class MapViewController: UIViewController {
     
     // This is needed to refresh the table's contents after adding a new classroom
     override func viewWillAppear(_ animated: Bool) {
+        // tells nav controller to make toolbar appear on the bottom of the screen
         self.navigationController?.isToolbarHidden = false;
         
     }
@@ -139,16 +147,5 @@ class MapViewController: UIViewController {
         task.resume()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
