@@ -6,12 +6,12 @@
 If you download the repository, the code will not work immediately. You need to get API keys for the Google Maps API and the Google Maps Geocoding API. For our app, we stored these in another Swift file (that we had git ignore). In this Swift file, put the two API keys as constant variables. Google Maps API key variable should be called "apiKey" and the Geocoding API key should be called "gcAPIKey". 
 
 
-'''swift
+```swift
 
 let apiKey = "THE_API_KEY_FROM_GOOGLE" // Google Maps
 let gcAPIKey = "ANOTHER_API_KEY_FROM_GOOGLE" // Google Geocoding API
 
-'''
+```
 
 
 Then the code will run. </p>
