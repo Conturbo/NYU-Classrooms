@@ -14,7 +14,7 @@ let gcAPIKey = "KEY_FOR_GEOCODING_API" // Google Geocoding API
 ```
 
 
-Then the code will run. </p>
+Then the app will run. </p>
 
 <h2>Overview</h2>
 <p>NYU Classrooms is the simple iOS app for finding where your classes are. Enter an NYU building code and the app will display on a Google Map that location. That address can be exported to the Google Maps app or website. Additionally, users can save their favorite building codes in local storage. Built with Swift, the Google Maps iOS SDK and Google Maps Geocoding API.</p>
